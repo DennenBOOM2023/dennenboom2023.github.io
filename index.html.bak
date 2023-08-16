@@ -3,9 +3,10 @@
 	<head>
 		<title>DennenBOOM</title>
 		<script src="https://cdn.tailwindcss.com"></script>	
+		<script src="./js/main.js"></script>
 	</head>
 	<body class="bg-slate-800">
-		<div class="font-mono drop-shadow-xl mx-auto bg-slate-500 flex place-content-center">
+		<div class="drop-shadow-xl mx-auto bg-slate-500 flex place-content-center">
 			<svg class="w-24 h-24 p-3 align-middle" viewBox="0 0 512 512"><path d="M440.5 88.5l-52 52L415 167c9.4 9.4 9.4 24.6 0 33.9l-17.4 17.4c11.8 26.1 18.4 55.1 18.4 85.6 0 114.9-93.1 208-208 208S0 418.9 0 304 93.1 96 208 96c30.5 0 59.5 6.6 85.6 18.4L311 97c9.4-9.4 24.6-9.4 33.9 0l26.5 26.5 52-52 17.1 17zM500 60h-24c-6.6 0-12 5.4-12 12s5.4 12 12 12h24c6.6 0 12-5.4 12-12s-5.4-12-12-12zM440 0c-6.6 0-12 5.4-12 12v24c0 6.6 5.4 12 12 12s12-5.4 12-12V12c0-6.6-5.4-12-12-12zm33.9 55l17-17c4.7-4.7 4.7-12.3 0-17-4.7-4.7-12.3-4.7-17 0l-17 17c-4.7 4.7-4.7 12.3 0 17 4.8 4.7 12.4 4.7 17 0zm-67.8 0c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17zm67.8 34c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17zM112 272c0-35.3 28.7-64 64-64 8.8 0 16-7.2 16-16s-7.2-16-16-16c-52.9 0-96 43.1-96 96 0 8.8 7.2 16 16 16s16-7.2 16-16z"/></svg>
 			<p class="font-light text-5xl text-slate-100 py-5">Dennen</p>
 			<p class="font-bold text-5xl py-5 text-orange-600">BOOM</p>
@@ -16,23 +17,40 @@
 			<div class="w-full bg-white p-5 m-10 rounded-xl drop-shadow-xl">
 				<ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400">
 					<li class="mr-2">
-						<a href="#" class="inline-block p-4 text-blue-600 bg-gray-100 rounded-t-lg active dark:bg-gray-800 dark:text-blue-500">O</a>
+						<a href="#" id="O"
+						   onclick="changeText('O')" 
+						   class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-300">O</a>
 					</li>
 					<li class="mr-2">
-						<a href="#" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Si</a>
+						<a href="#" id="Si"
+						   onclick="changeText('Si')" 
+						   class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-300">Si</a>
 					</li>
 					<li class="mr-2">
-						<a href="#" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Al</a>
+						<a href="#" id="Al"
+						   onclick="changeText('Al')" 
+						   class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-300">Al</a>
 					</li>
 					<li class="mr-2">
-						<a href="#" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Fe</a>
+						<a href="#" id="Fe" 
+						   onclick="changeText('Fe')" 
+						   class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-300">Fe</a>
 					</li>
 					<li class="mr-2">
-						<a href="#" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Ca</a>
+						<a href="#" id="Ca"
+						   onclick="changeText('Ca')" 
+						   class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-300">Ca</a>
 					</li>
 				</ul>
-				<div class="mt-2 text-black font-mono">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet rhoncus leo. Vivamus aliquam tempus posuere. Vestibulum tincidunt nunc a purus fermentum, quis aliquam justo gravida. Suspendisse id scelerisque leo, et ullamcorper tortor. Vivamus aliquet felis et nisl faucibus scelerisque quis sed ligula. Proin viverra ante massa, non scelerisque sem rutrum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed dictum eros. Sed at pellentesque velit. Nam sagittis libero et ipsum blandit egestas. Morbi quis elementum ipsum. Morbi at finibus orci. Integer aliquet nisi viverra ipsum suscipit porta. Aliquam erat volutpat. Nam mattis rhoncus metus nec ultrices. Ut pharetra tellus nisi, id ultrices metus consequat et.</p>
+				<div class="mt-2 text-black font-mono flex">
+					<div class="w-2/3 mr-5">
+						<p id="elementText">Bem-vindo ao <b>Guia da Crosta Terrestre</b>, onde nós te descrevemos os elementos mais abundantes do local aonde vivemos.<br><br>Para começar, <b>selecione um elemento na barra acima</b>.</p>
+					</div>
+					<div class="w-1/3 ml-5 bg-gray-100 rounded-xl p-5 shadow-xl">
+						<img id="elementImage" class="mx-auto" 
+							 src="./imagens/earth-icon.png"></img>
+						<a class="py-5" id="imageCredits" href="https://www.iconfinder.com/iconsets/planets-1"><p class="text-xs text-cyan-600 underline">Fonte da imagem</p></li>
+					</div>
 				</div>
 			</div>	
 		</div>
