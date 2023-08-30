@@ -7,15 +7,13 @@
 	</head>
 	<body class="bg-slate-800">
 		<div class="drop-shadow-xl mx-auto bg-slate-500 flex place-content-center">
-			<svg class="w-24 h-24 p-3 align-middle" viewBox="0 0 512 512"><path d="M440.5 88.5l-52 52L415 167c9.4 9.4 9.4 24.6 0 33.9l-17.4 17.4c11.8 26.1 18.4 55.1 18.4 85.6 0 114.9-93.1 208-208 208S0 418.9 0 304 93.1 96 208 96c30.5 0 59.5 6.6 85.6 18.4L311 97c9.4-9.4 24.6-9.4 33.9 0l26.5 26.5 52-52 17.1 17zM500 60h-24c-6.6 0-12 5.4-12 12s5.4 12 12 12h24c6.6 0 12-5.4 12-12s-5.4-12-12-12zM440 0c-6.6 0-12 5.4-12 12v24c0 6.6 5.4 12 12 12s12-5.4 12-12V12c0-6.6-5.4-12-12-12zm33.9 55l17-17c4.7-4.7 4.7-12.3 0-17-4.7-4.7-12.3-4.7-17 0l-17 17c-4.7 4.7-4.7 12.3 0 17 4.8 4.7 12.4 4.7 17 0zm-67.8 0c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17zm67.8 34c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17zM112 272c0-35.3 28.7-64 64-64 8.8 0 16-7.2 16-16s-7.2-16-16-16c-52.9 0-96 43.1-96 96 0 8.8 7.2 16 16 16s16-7.2 16-16z"/></svg>
-			<p class="font-light text-5xl text-slate-100 py-5">Dennen</p>
-			<p class="font-bold text-5xl py-5 text-orange-600">BOOM</p>
+			<svg class="w-48 h-48 sm:h-36 sm:w-36 md:w-24 md:h-24 p-3 align-middle" viewBox="0 0 512 512"><path d="M440.5 88.5l-52 52L415 167c9.4 9.4 9.4 24.6 0 33.9l-17.4 17.4c11.8 26.1 18.4 55.1 18.4 85.6 0 114.9-93.1 208-208 208S0 418.9 0 304 93.1 96 208 96c30.5 0 59.5 6.6 85.6 18.4L311 97c9.4-9.4 24.6-9.4 33.9 0l26.5 26.5 52-52 17.1 17zM500 60h-24c-6.6 0-12 5.4-12 12s5.4 12 12 12h24c6.6 0 12-5.4 12-12s-5.4-12-12-12zM440 0c-6.6 0-12 5.4-12 12v24c0 6.6 5.4 12 12 12s12-5.4 12-12V12c0-6.6-5.4-12-12-12zm33.9 55l17-17c4.7-4.7 4.7-12.3 0-17-4.7-4.7-12.3-4.7-17 0l-17 17c-4.7 4.7-4.7 12.3 0 17 4.8 4.7 12.4 4.7 17 0zm-67.8 0c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17zm67.8 34c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17zM112 272c0-35.3 28.7-64 64-64 8.8 0 16-7.2 16-16s-7.2-16-16-16c-52.9 0-96 43.1-96 96 0 8.8 7.2 16 16 16s16-7.2 16-16z"/></svg>
 		</div>
 		
 		<div class="flex">
 			
 			<div class="w-full bg-white p-5 m-10 rounded-xl drop-shadow-xl">
-				<ul class="flex flex-wrap sm:text-xl md:text-sm font-medium text-center text-gray-500 border-b border-gray-200">
+				<ul class="flex flex-wrap text-xl md:text-sm font-medium text-center text-gray-500 border-b border-gray-200">
 					<li class="mr-2">
 						<a href="#" id="O"
 						   onclick="changeText('O')" 
@@ -57,12 +55,9 @@
 						   class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-100">K</a>
 					</li>
 				</ul>
-				<div class="sm:grid sm:grid-rows-1 sm:grid-flow-col sm:justify-center mt-2 text-black font-mono">
-					<div class="sm:w-full sm:mb-3 md:w-3/4 md:mr-5">
+				<div class="mt-2 text-black font-mono justify-center text-left text-xl md:text-base">
+					<div class="w-full">
 						<p id="elementText">Bem-vindo ao <b>Guia da Crosta Terrestre</b>, onde nós te descrevemos os elementos mais abundantes do local aonde vivemos.<br><br>Para começar, <b>selecione um elemento na barra acima</b>.</p>
-					</div>
-					<div class="sm:mt-2 sm:border-t-5 p-2 md:w-1/4 md:ml-5">
-						<iframe src="https://giphy.com/embed/W2KU5PKZJHnbF4pwc2" class="w-48 h-48 bg-gray-100 rounded-xl shadow-xl content-center p-5" allowFullScreen></iframe>
 					</div>
 				</div>
 			</div>	
