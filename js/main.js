@@ -1,6 +1,7 @@
 let selectedElement = null;
 let konamiCode = "UUDDLRLRBAE";
 let cKC = "";
+let darkmode = false;
 
 const elementTexts = {
   "C": "O <b>Carbono</b> é o principal elemento responsável pela vida, sendo capaz de fazer <b>4 ligações covalentes</b> tal qual o <a href=\"#\" onClick=\"changeText('Si')\" class='text-blue-600 hover:text-blue-800 underline font-bold'>Silício</a>.<br><br>Substâncias que contém Carbono fazem parte da vertente da Quimíca chamada Química Orgânica, a química da vida, na qual os principais elementos fazem parte do chamado <b>grupo CHON</b> (<a href=\"#\" onClick=\"changeText('C')\" class='text-blue-600 hover:text-blue-800 underline font-bold'>carbono</a>, <a href=\"#\" onClick=\"changeText('H')\" class='text-blue-600 hover:text-blue-800 underline font-bold'>hidrogênio</a>, <a href=\"#\" onClick=\"changeText('O')\" class='text-blue-600 hover:text-blue-800 underline font-bold'>oxigênio</a> e <a href=\"#\" onClick=\"changeText('N')\" class='text-blue-600 hover:text-blue-800 underline font-bold'>nitrogênio</a>), esses sendo a fundação na qual a vida se construiu.<br><br><b>Massa Atômica:</b> 12,011u<br><b>Ponto de Ebulição:</b> 4287°C<br><b>Ponto de Fusão:</b> 3550°C<br><b>Número Atômico:</b> 6<br><br><a href='https://brasilescola.uol.com.br/quimica/carbono.htm' target='_blank'><p class='text-blue-600 hover:text-blue-800 underline font-bold'>Fonte</p></a>",
@@ -26,12 +27,41 @@ const elementTexts = {
   "K": "Essencial às plantas, o <b>potássio</b> é muito utilizado em <b>fertilizantes NPK</b> (<a href=\"#\" onClick=\"changeText('N')\" class='text-blue-600 hover:text-blue-800 underline font-bold'>Nitrogênio</a>, Fósforo e Potássio), que são os melhores no mercado, e na produção do hidróxido de potássio <b>(KOH)</b> muito utilizado para a fabricação de sabão, o qual é convertido para carbonato de cálcio, outro fertilizante muito famoso no mercado brasileiro. O potássio atua como cofator de muitas enzimas do corpo humano e é necessário na secreção de insulina.<br><br><b>Massa Atômica:</b> 39,098u<br><b>Ponto de Ebulição:</b> 759°C<br><b>Ponto de Fusão:</b> 63°C<br><b>Número Atômico:</b> 19<br><br><a href='https://brasilescola.uol.com.br/quimica/potassio.htm' target='_blank'><p class='text-blue-600 hover:text-blue-800 underline font-bold'>Fonte</p></a>"
 }
 
+const elementDescriptions = {
+  "Al": "Latinha de alúminio sendo esmagada.",
+  "C": "Rocha de Grafite, alótropo do Carbono.",
+  "Si": "<i>Wafer</i> de Silício, usado em microchips.",
+  "O": "Cilíndro de Oxigênio.",
+  "Na": "Cortes de metal de Sódio puro.",
+  "N": "Nitrogênio líquido sendo derramado.",
+  "Mg": "Cristais de Magnésio.",
+  "K": "Cloreto de Potássio, um fertilizante comum.",
+  "H": "Hidrogênio puro brilhando em Ultra-violeta.",
+  "Fe": "Esteiras com Ferro Gusa derretido.",
+  "Ca": "Depósito de Calcário na Croácia."
+};
+
+const elementSources = {
+  "Al": "https://commons.wikimedia.org/wiki/File:Aluminium-can-squeezed-by-hand.jpg",
+  "C": "https://commons.wikimedia.org/wiki/File:Graphite-and-diamond-with-scale.jpg",
+  "Si": "https://commons.wikimedia.org/wiki/File:Etchedwafer.jpg",
+  "O": "https://commons.wikimedia.org/wiki/File:Diving_cylinder_oxygen_label.JPG",
+  "Na": "https://commons.wikimedia.org/wiki/File:Na_(Sodium).jpg",
+  "N": "https://commons.wikimedia.org/wiki/File:Fluessiger_Stickstoff.jpg",
+  "Mg": "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_2893_Crystalised_magnesium.jpg",
+  "K": "https://commons.wikimedia.org/wiki/File:Compacted_potassium_chloride,_fertilizer_grade.jpg",
+  "H": "https://commons.wikimedia.org/wiki/File:Hydrogenglow.jpg",
+  "Fe": "https://commons.wikimedia.org/wiki/File:Chains_of_pig_iron_casting_machine_06.jpg",
+  "Ca": "https://commons.wikimedia.org/wiki/File:Limestone_Eocene_deposit_at_Sinj_Stari_grad_-_Dalmatia_-_Croatia_IMG_20210820_083857.jpg"
+}
+
+
 const elements = ["C", "H", "O", "N", "Si", "Al", "Fe", "Ca", "Na", "Mg", "K"];
 
 const unselectedClass = "inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-100"
-const unselectedClassCHON = "inline-block p-4 rounded-t-lg hover:text-gray-700 hover:bg-green-100 text-gray-600";
-const selectedClass = "inline-block p-4 text-blue-600 bg-gray-100 rounded-t-lg active";
-const selectedClassCHON = "inline-block p-4 text-blue-600 bg-green-100 rounded-t-lg active";
+const unselectedClassCHON = "inline-block p-4 rounded-t-lg hover:text-gray-700 hover:bg-green-100 dark:hover:bg-green-400 dark:hover:text-white text-gray-600 dark:text-gray-300";
+const selectedClass = "inline-block p-4 text-gray-500 dark:text-gray-900 bg-gray-100 rounded-t-lg active";
+const selectedClassCHON = "inline-block p-4 text-gray-500 bg-green-100 dark:bg-green-500 dark:text-gray-900 rounded-t-lg active";
 
 function isPhone() {
   if (navigator.userAgent.match(/Android/i)
@@ -59,14 +89,17 @@ function changeText(element) {
     document.getElementById(element).className = selectedClass;
    
   document.getElementById("elementText").innerHTML = elementTexts[element];
+  document.getElementById("elementImage").src = `./imagens/${element}.png`
+  document.getElementById("imageText").innerHTML = elementDescriptions[element];
+  document.getElementById("imageText").href = elementSources[element];
 
   selectedElement = String(element);
 }
 
 function reset() {
-  const defaultTextComputer = "Bem-vindo ao <b>Guia da Crosta Terrestre</b>, onde nós te descrevemos os elementos mais abundantes e importantes do local aonde vivemos.<br>Para começar, <b>selecione um elemento na barra acima.</b><br><br><b>Atalhos de Teclado:</b><br><kbd class=\"px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500\">←</kbd> ou <kbd class=\"px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500\">→</kbd> - Trocar entre elementos<br><br><kbd class=\"px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500\">Esc</kbd> - Resetar a página";
+  const defaultTextComputer = "Bem-vindo ao <b>Guia da Crosta Terrestre</b>, onde nós te descrevemos os elementos mais abundantes e importantes da nossa gigante esfera que chamamos de Terra.<br>Para começar, <b>selecione um elemento na barra acima.</b><br><br><b>Atalhos de Teclado:</b><br><kbd class=\"px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500\">←</kbd> ou <kbd class=\"px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500\">→</kbd> - Trocar entre elementos<br><br><kbd class=\"px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500\">Esc</kbd> - Resetar a página<br><br><kbd class=\"px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500\">D</kbd> - Ativar ou desativar o Modo Escuro";
 
-  const defaultTextPhone = "Bem-vindo ao <b>Guia da Crosta Terrestre</b>, onde nós te descrevemos os elementos mais abundantes e importantes do local aonde vivemos.<br><br>Para começar, <b>selecione um elemento na barra acima.</b>";
+  const defaultTextPhone = "Bem-vindo ao <b>Guia da Crosta Terrestre</b>, onde nós te descrevemos os elementos mais abundantes e importantes da nossa gigante esfera que chamamos de Terra.<br><br>Para começar, <b>selecione um elemento na barra acima.</b>";
   
   elements.forEach((e) => {
     if(["C", "H", "O", "N"].includes(e))
@@ -79,26 +112,35 @@ function reset() {
   else
     document.getElementById("elementText").innerHTML = defaultTextComputer;
   
+  document.getElementById("elementImage").src = "./imagens/earth-icon.png";
+  document.getElementById("imageText").innerHTML = "Ilustração do nosso planeta Terra.";
+  document.getElementById("imageText").href = "https://www.pngwing.com/pt/free-png-cmrkn";
+
   selectedElement = null;
 }
 
+function enableDarkMode() {
+  document.getElementById("body").className = darkmode ? "" : "dark";
+  darkmode = !darkmode;
+  console.log(1);
+}
+
 document.onkeydown = function(event) {
-  const el = ["C", "H", "O", "N", "Si", "Al", "Fe", "Ca", "Na", "Mg", "K"];
-  
+
+  if(event.key.toLowerCase() === "d") enableDarkMode();
+
   if(event.keyCode === 37 || event.keyCode === 39) {
     if(selectedElement === null)
       changeText("C");
     else {
       switch(event.keyCode) {
         case 37: // Left Arrow 
-          console.log(1);
           if(selectedElement == "C")
             changeText("K");
           else
             changeText(elements[elements.indexOf(selectedElement) - 1]);
           break;
         case 39: // Right Arrow
-          console.log(2);
           if(selectedElement == "K")
             changeText("C");
           else
@@ -117,7 +159,7 @@ document.onkeydown = function(event) {
     cKC += keys[event.keyCode];
     if(konamiCode.slice(0, cKC.length) == cKC) {
       if(cKC == konamiCode) {
-        document.getElementById("elementText").innerHTML = "<b>alá ele</b>";
+        document.getElementById("elementText").innerHTML = "<iframe src=\"http://pudim.com.br\" class=\"w-full h-screen\"></iframe>";
         cKC = "";
       }
     } else {
