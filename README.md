@@ -3,7 +3,7 @@
 
 ---
 
-Este é uma versão simplificada da Tabela Periódica que todos conhecemos, mas apenas com os **oito elementos mais abundantes.**
+Este é uma versão simplificada da Tabela Periódica que todos conhecemos, mas apenas com os **oito elementos mais abundantes,** além de alguns outros que achamos importantes mencionar.
 
 Todo elemento tem uma pequena descrição, mostrando o que tem de interessante nele, com algumas características importantes sobre cada.
 
