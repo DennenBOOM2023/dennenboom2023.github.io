@@ -77,6 +77,30 @@ function isPhone() {
   }
 }
 
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+
 function changeText(element) {
   elements.forEach((e) => {
     if(["C", "H", "O", "N"].includes(e))
@@ -97,6 +121,13 @@ function changeText(element) {
 }
 
 function reset() {
+  if(getCookie("darkmode") === "")
+    setCookie("darkmode", "0", 365);
+  else {
+    darkmode = getCookie("darkmode") == "1" ? true : false;
+    document.getElementById("body").className = darkmode ? "dark transition-all" : "transition-all";
+  }
+
   const defaultTextComputer = "Bem-vindo ao <b>Guia da Crosta Terrestre</b>, onde nós te descrevemos os elementos mais abundantes e importantes da nossa gigante esfera que chamamos de Terra.<br>Para começar, <b>selecione um elemento na barra acima.</b><br><br><b>Atalhos de Teclado:</b><br><kbd class=\"px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500\">←</kbd> ou <kbd class=\"px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500\">→</kbd> - Trocar entre elementos<br><br><kbd class=\"px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500\">Esc</kbd> - Resetar a página<br><br><kbd class=\"px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500\">D</kbd> - Ativar ou desativar o Modo Escuro";
 
   const defaultTextPhone = "Bem-vindo ao <b>Guia da Crosta Terrestre</b>, onde nós te descrevemos os elementos mais abundantes e importantes da nossa gigante esfera que chamamos de Terra.<br><br>Para começar, <b>selecione um elemento na barra acima.</b>";
@@ -120,8 +151,9 @@ function reset() {
 }
 
 function enableDarkMode() {
-  document.getElementById("body").className = darkmode ? "" : "dark";
+  document.getElementById("body").className = darkmode ? "transition-all" : "dark transition-all";
   darkmode = !darkmode;
+  setCookie("darkmode", darkmode ? "1" : 0, 365);
   console.log(1);
 }
 
