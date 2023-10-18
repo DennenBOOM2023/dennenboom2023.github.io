@@ -5,9 +5,9 @@ let darkmode = false;
 
 const elementTexts = {
   "C": "O <b>Carbono</b> é o principal elemento responsável pela vida, sendo capaz de fazer <b>4 ligações covalentes</b> tal qual o <a href=\"#\" onClick=\"changeText('Si')\" class='text-blue-600 hover:text-blue-800 underline font-bold'>Silício</a>.<br><br>Substâncias que contém Carbono fazem parte da vertente da Quimíca chamada Química Orgânica, a química da vida, na qual os principais elementos fazem parte do chamado <b>grupo CHON</b> (<a href=\"#\" onClick=\"changeText('C')\" class='text-blue-600 hover:text-blue-800 underline font-bold'>carbono</a>, <a href=\"#\" onClick=\"changeText('H')\" class='text-blue-600 hover:text-blue-800 underline font-bold'>hidrogênio</a>, <a href=\"#\" onClick=\"changeText('O')\" class='text-blue-600 hover:text-blue-800 underline font-bold'>oxigênio</a> e <a href=\"#\" onClick=\"changeText('N')\" class='text-blue-600 hover:text-blue-800 underline font-bold'>nitrogênio</a>), esses sendo a fundação na qual a vida se construiu.<br><br><b>Massa Atômica:</b> 12,011u<br><b>Ponto de Ebulição:</b> 4287°C<br><b>Ponto de Fusão:</b> 3550°C<br><b>Número Atômico:</b> 6<br><br><a href='https://brasilescola.uol.com.br/quimica/carbono.htm' target='_blank'><p class='text-blue-600 hover:text-blue-800 underline font-bold'>Fonte</p></a>",
-  
+
   "H": "O <b>Hidrogênio</b> é o elemento mais simples que existe, composto apenas por um próton e um eléctron em seu isótopo mais abundante.<br><br>Durante o <i>Big Bang</i>, o Hidrogênio foi o primeiro elemento a ser criado, sendo até hoje o elemento mais abundante no universo em geral, compondo boa parte da massa das estrelas.<br><br>O Hidrogênio é um dos elementos que compõe o <b>grupo CHON</b> (<a href=\"#\" onClick=\"changeText('C')\" class='text-blue-600 hover:text-blue-800 underline font-bold'>carbono</a>, <a href=\"#\" onClick=\"changeText('H')\" class='text-blue-600 hover:text-blue-800 underline font-bold'>hidrogênio</a>, <a href=\"#\" onClick=\"changeText('O')\" class='text-blue-600 hover:text-blue-800 underline font-bold'>oxigênio</a> e <a href=\"#\" onClick=\"changeText('N')\" class='text-blue-600 hover:text-blue-800 underline font-bold'>nitrogênio</a>), esses sendo a fundação na qual a vida se construiu.<br><br><b>Massa Atômica:</b> 1,00794u<br><b>Ponto de Ebulição:</b> -252°C<br><b>Ponto de Fusão:</b> -259°C<br><b>Número Atômico:</b> 1<br><br><a href='https://brasilescola.uol.com.br/quimica/hidrogenio.htm' target='_blank'><p class='text-blue-600 hover:text-blue-800 underline font-bold'>Fonte</p></a>",
-  
+
   "O": "O <b>Oxigênio</b> é o elemento mais abundante da crosta terrestre. Em sua forma natural, é um gás, mas pode se prender a outros elementos em óxidos, que é como é encontrado em sua maioria.<br><br>Presente em diversas moléculas essenciais à vida, o oxigênio participa de um grupo extremamente importante para nós, o <b>grupo CHON</b> (<a href=\"#\" onClick=\"changeText('C')\" class='text-blue-600 hover:text-blue-800 underline font-bold'>carbono</a>, <a href=\"#\" onClick=\"changeText('H')\" class='text-blue-600 hover:text-blue-800 underline font-bold'>hidrogênio</a>, <a href=\"#\" onClick=\"changeText('O')\" class='text-blue-600 hover:text-blue-800 underline font-bold'>oxigênio</a> e <a href=\"#\" onClick=\"changeText('N')\" class='text-blue-600 hover:text-blue-800 underline font-bold'>nitrogênio</a>), sendo esses a fundação aonde a vida se construiu.<br><br><b>Massa Atômica:</b> 15,9994u<br><b>Ponto de Ebulição:</b> -183°C<br><b>Ponto de Fusão:</b> -218,8°C<br><b>Número Atômico:</b> 8<br><br><a href='https://brasilescola.uol.com.br/quimica/oxigenio.htm' target='_blank'><p class='text-blue-600 hover:text-blue-800 underline font-bold'>Fonte</p></a>",
 
   "N": "O <b>Nitrogênio</b> (também conhecido como <b>Azoto</b>) é apenas o trigésimo elemento mais abundante na crosta terrestre, porém nem de longe o menos importante, sendo constituente do <b>grupo CHON</b> (<a href=\"#\" onClick=\"changeText('C')\" class='text-blue-600 hover:text-blue-800 underline font-bold'>carbono</a>, <a href=\"#\" onClick=\"changeText('H')\" class='text-blue-600 hover:text-blue-800 underline font-bold'>hidrogênio</a>, <a href=\"#\" onClick=\"changeText('O')\" class='text-blue-600 hover:text-blue-800 underline font-bold'>oxigênio</a> e <a href=\"#\" onClick=\"changeText('N')\" class='text-blue-600 hover:text-blue-800 underline font-bold'>nitrogênio</a>), sendo os constituentes desse grupo a fundação na qual a vida se construiu e na qual a Química Orgânica se baseia.<br><br>O Nitrogênio é capaz de fazer 3 ligações covalentes, participandos de algumas cadeias carbônicas dentro da química orgânica. Quanto a vida, o Nitrogênio é essencial a vida, sendo grande componente de <b>fertilizantes NPK</b> (Nitrogênio, Fósforo e <a href=\"#\" onClick=\"changeText('K')\" class='text-blue-600 hover:text-blue-800 underline font-bold'>Potássio</a>), o tipo mais comum de fertilizantes que existe.<br><br><b>Massa Atômica:</b> 12,011u<br><b>Ponto de Ebulição:</b> -195,79°C<br><b>Ponto de Fusão:</b> -210°C<br><b>Número Atômico:</b> 6<br><br><a href='https://brasilescola.uol.com.br/quimica/nitrogenio.htm' target='_blank'><p class='text-blue-600 hover:text-blue-800 underline font-bold'>Fonte</p></a>",
@@ -28,7 +28,7 @@ const elementTexts = {
 }
 
 const elementDescriptions = {
-  "Al": "Latinha de alúminio sendo esmagada.",
+  "Al": "Latinha de alumínio sendo esmagada.",
   "C": "Rocha de Grafite, alótropo do Carbono.",
   "Si": "<i>Wafer</i> de Silício, usado em microchips.",
   "O": "Cilíndro de Oxigênio.",
@@ -65,22 +65,22 @@ const selectedClassCHON = "inline-block p-4 text-gray-500 bg-green-100 dark:bg-g
 
 function isPhone() {
   if (navigator.userAgent.match(/Android/i)
-     || navigator.userAgent.match(/webOS/i)
-     || navigator.userAgent.match(/iPhone/i)
-     || navigator.userAgent.match(/iPad/i)
-     || navigator.userAgent.match(/iPod/i)
-     || navigator.userAgent.match(/BlackBerry/i)
-     || navigator.userAgent.match(/Windows Phone/i)) {
-      return true;
-   } else {
-      return false;
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)) {
+    return true;
+  } else {
+    return false;
   }
 }
 
 function setCookie(cname, cvalue, exdays) {
   const d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  let expires = "expires="+ d.toUTCString();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  let expires = "expires=" + d.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
@@ -88,7 +88,7 @@ function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
   let ca = decodedCookie.split(';');
-  for(let i = 0; i <ca.length; i++) {
+  for (let i = 0; i < ca.length; i++) {
     let c = ca[i];
     while (c.charAt(0) == ' ') {
       c = c.substring(1);
@@ -103,15 +103,15 @@ function getCookie(cname) {
 
 function changeText(element) {
   elements.forEach((e) => {
-    if(["C", "H", "O", "N"].includes(e))
+    if (["C", "H", "O", "N"].includes(e))
       document.getElementById(e).className = unselectedClassCHON;
     else document.getElementById(e).className = unselectedClass;
   });
-  if(["C", "H", "O", "N"].includes(String(element).toUpperCase()))
+  if (["C", "H", "O", "N"].includes(String(element).toUpperCase()))
     document.getElementById(element).className = selectedClassCHON;
   else
     document.getElementById(element).className = selectedClass;
-   
+
   document.getElementById("elementText").innerHTML = elementTexts[element];
   document.getElementById("elementImage").src = `./imagens/${element}.png`
   document.getElementById("imageText").innerHTML = elementDescriptions[element];
@@ -121,7 +121,7 @@ function changeText(element) {
 }
 
 function reset() {
-  if(getCookie("darkmode") === "")
+  if (getCookie("darkmode") === "")
     setCookie("darkmode", "0", 365);
   else {
     darkmode = getCookie("darkmode") == "1" ? true : false;
@@ -131,18 +131,18 @@ function reset() {
   const defaultTextComputer = "Bem-vindo ao <b>Guia da Crosta Terrestre</b>, onde nós te descrevemos os elementos mais abundantes e importantes da nossa gigante esfera que chamamos de Terra.<br>Para começar, <b>selecione um elemento na barra acima.</b><br><br><b>Atalhos de Teclado:</b><br><kbd class=\"px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500\">←</kbd> ou <kbd class=\"px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500\">→</kbd> - Trocar entre elementos<br><br><kbd class=\"px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500\">Esc</kbd> - Resetar a página<br><br><kbd class=\"px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500\">D</kbd> - Ativar ou desativar o Modo Escuro";
 
   const defaultTextPhone = "Bem-vindo ao <b>Guia da Crosta Terrestre</b>, onde nós te descrevemos os elementos mais abundantes e importantes da nossa gigante esfera que chamamos de Terra.<br><br>Para começar, <b>selecione um elemento na barra acima.</b>";
-  
+
   elements.forEach((e) => {
-    if(["C", "H", "O", "N"].includes(e))
+    if (["C", "H", "O", "N"].includes(e))
       document.getElementById(e).className = unselectedClassCHON;
     else document.getElementById(e).className = unselectedClass;
   });
 
-  if(isPhone())
+  if (isPhone())
     document.getElementById("elementText").innerHTML = defaultTextPhone;
   else
     document.getElementById("elementText").innerHTML = defaultTextComputer;
-  
+
   document.getElementById("elementImage").src = "./imagens/earth-icon.png";
   document.getElementById("imageText").innerHTML = "Ilustração do nosso planeta Terra.";
   document.getElementById("imageText").href = "https://www.pngwing.com/pt/free-png-cmrkn";
@@ -159,38 +159,38 @@ function enableDarkMode() {
 
 document.onkeydown = function(event) {
 
-  if(event.key.toLowerCase() === "d") enableDarkMode();
+  if (event.key.toLowerCase() === "d") enableDarkMode();
 
-  if(event.keyCode === 37 || event.keyCode === 39) {
-    if(selectedElement === null)
+  if (event.keyCode === 37 || event.keyCode === 39) {
+    if (selectedElement === null)
       changeText("C");
     else {
-      switch(event.keyCode) {
+      switch (event.keyCode) {
         case 37: // Left Arrow 
-          if(selectedElement == "C")
+          if (selectedElement == "C")
             changeText("K");
           else
             changeText(elements[elements.indexOf(selectedElement) - 1]);
           break;
         case 39: // Right Arrow
-          if(selectedElement == "K")
+          if (selectedElement == "K")
             changeText("C");
           else
             changeText(elements[elements.indexOf(selectedElement) + 1]);
           break;
-      }  
+      }
     }
-  } else if(event.keyCode === 27) reset();
+  } else if (event.keyCode === 27) reset();
 
   // Konami Code
-  if([38, 40, 37, 39, 66, 65, 13].includes(event.keyCode)) {
+  if ([38, 40, 37, 39, 66, 65, 13].includes(event.keyCode)) {
     const keys = {
       38: "U", 40: "D", 37: "L", 39: "R", 66: "B", 65: "A", 13: "E"
     };
-    
+
     cKC += keys[event.keyCode];
-    if(konamiCode.slice(0, cKC.length) == cKC) {
-      if(cKC == konamiCode) {
+    if (konamiCode.slice(0, cKC.length) == cKC) {
+      if (cKC == konamiCode) {
         document.getElementById("elementText").innerHTML = "<iframe src=\"http://pudim.com.br\" class=\"w-full h-screen\"></iframe>";
         cKC = "";
       }
@@ -198,7 +198,7 @@ document.onkeydown = function(event) {
       cKC = "";
     }
   }
-  
+
 }
 
 /*

@@ -5,21 +5,24 @@
   <title>DennenBOOM</title>
   <link rel="stylesheet" href="./main.css">
   <script src="./js/main.js"></script>
+  <link rel="icon" type="image/x-icon" href="/imagens/favicon.ico">
 </head>
 
 <body class="transition-all" onload="reset();" id="body">
   <div class="drop-shadow-xl mx-auto bg-slate-500 dark:bg-slate-700 flex place-content-center">
-    <svg class="w-96 h-96 sm:h-48 sm:w-48 md:w-24 md:h-24 p-3 align-middle" viewBox="0 0 512 512">
-      <path
-        d="M440.5 88.5l-52 52L415 167c9.4 9.4 9.4 24.6 0 33.9l-17.4 17.4c11.8 26.1 18.4 55.1 18.4 85.6 0 114.9-93.1 208-208 208S0 418.9 0 304 93.1 96 208 96c30.5 0 59.5 6.6 85.6 18.4L311 97c9.4-9.4 24.6-9.4 33.9 0l26.5 26.5 52-52 17.1 17zM500 60h-24c-6.6 0-12 5.4-12 12s5.4 12 12 12h24c6.6 0 12-5.4 12-12s-5.4-12-12-12zM440 0c-6.6 0-12 5.4-12 12v24c0 6.6 5.4 12 12 12s12-5.4 12-12V12c0-6.6-5.4-12-12-12zm33.9 55l17-17c4.7-4.7 4.7-12.3 0-17-4.7-4.7-12.3-4.7-17 0l-17 17c-4.7 4.7-4.7 12.3 0 17 4.8 4.7 12.4 4.7 17 0zm-67.8 0c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17zm67.8 34c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17zM112 272c0-35.3 28.7-64 64-64 8.8 0 16-7.2 16-16s-7.2-16-16-16c-52.9 0-96 43.1-96 96 0 8.8 7.2 16 16 16s16-7.2 16-16z" />
-    </svg>
+    <a href="#" onclick="reset();"><svg class="w-96 h-96 sm:h-48 sm:w-48 md:w-24 md:h-24 p-3 align-middle"
+        viewBox="0 0 512 512">
+        <path
+          d="M440.5 88.5l-52 52L415 167c9.4 9.4 9.4 24.6 0 33.9l-17.4 17.4c11.8 26.1 18.4 55.1 18.4 85.6 0 114.9-93.1 208-208 208S0 418.9 0 304 93.1 96 208 96c30.5 0 59.5 6.6 85.6 18.4L311 97c9.4-9.4 24.6-9.4 33.9 0l26.5 26.5 52-52 17.1 17zM500 60h-24c-6.6 0-12 5.4-12 12s5.4 12 12 12h24c6.6 0 12-5.4 12-12s-5.4-12-12-12zM440 0c-6.6 0-12 5.4-12 12v24c0 6.6 5.4 12 12 12s12-5.4 12-12V12c0-6.6-5.4-12-12-12zm33.9 55l17-17c4.7-4.7 4.7-12.3 0-17-4.7-4.7-12.3-4.7-17 0l-17 17c-4.7 4.7-4.7 12.3 0 17 4.8 4.7 12.4 4.7 17 0zm-67.8 0c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17zm67.8 34c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17zM112 272c0-35.3 28.7-64 64-64 8.8 0 16-7.2 16-16s-7.2-16-16-16c-52.9 0-96 43.1-96 96 0 8.8 7.2 16 16 16s16-7.2 16-16z" />
+      </svg></a>
   </div>
 
   <div class="flex">
 
     <div class="w-full bg-white p-5 m-10 rounded-xl drop-shadow-xl dark:bg-gray-900">
       <div class="relative">
-        <ul class="flex flex-wrap text-4xl lg:text-sm font-medium text-center dark:text-gray-200 text-gray-500 border-b border-gray-200">
+        <ul
+          class="flex flex-wrap text-4xl lg:text-sm font-medium text-center dark:text-gray-200 text-gray-500 border-b border-gray-200">
           <li class="mr-2">
             <a href="#" id="C" onclick="changeText('C')"
               class="inline-block p-4 rounded-t-lg hover:text-gray-700 hover:bg-green-100 dark:hover:bg-green-400 dark:hover:text-white text-gray-600 dark:text-gray-300">C</a>
@@ -65,9 +68,11 @@
               class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-100">K</a>
           </li>
           <a href="#" class="" onclick="enableDarkMode()">
-            <li class="mr-2 absolute right-0 bottom-0 p-4 rounded-t-xl w-fit h-fit cursor-pointer hover:bg-indigo-700 bg-indigo-500 dark:bg-indigo-700 transition-all">
+            <li
+              class="mr-2 absolute right-0 bottom-0 p-4 rounded-t-xl w-fit h-fit cursor-pointer hover:bg-indigo-700 bg-indigo-500 dark:bg-indigo-700 transition-all">
               <svg viewBox="0 0 24 24" class="w-6 h-6 inline-block align-middle">
-                <path d="M12,22C6.5,22,2,17.5,2,12c0-4.7,3.4-8.9,8-9.8c0.4-0.1,0.9,0.1,1.1,0.5c0.2,0.4,0.1,0.9-0.2,1.2C9.7,5.1,9,6.8,9,8.5    c0,3.6,2.9,6.5,6.5,6.5c1.7,0,3.4-0.7,4.6-1.9c0.3-0.3,0.8-0.4,1.2-0.2c0.4,0.2,0.6,0.6,0.5,1.1C20.9,18.6,16.7,22,12,22z     M7.6,5.3C5.4,6.8,4,9.2,4,12c0,4.4,3.6,8,8,8c2.8,0,5.2-1.4,6.7-3.6c-1,0.4-2.1,0.6-3.2,0.6C10.8,17,7,13.2,7,8.5    C7,7.4,7.2,6.3,7.6,5.3z"/>
+                <path
+                  d="M12,22C6.5,22,2,17.5,2,12c0-4.7,3.4-8.9,8-9.8c0.4-0.1,0.9,0.1,1.1,0.5c0.2,0.4,0.1,0.9-0.2,1.2C9.7,5.1,9,6.8,9,8.5    c0,3.6,2.9,6.5,6.5,6.5c1.7,0,3.4-0.7,4.6-1.9c0.3-0.3,0.8-0.4,1.2-0.2c0.4,0.2,0.6,0.6,0.5,1.1C20.9,18.6,16.7,22,12,22z     M7.6,5.3C5.4,6.8,4,9.2,4,12c0,4.4,3.6,8,8,8c2.8,0,5.2-1.4,6.7-3.6c-1,0.4-2.1,0.6-3.2,0.6C10.8,17,7,13.2,7,8.5    C7,7.4,7.2,6.3,7.6,5.3z" />
               </svg>
             </li>
           </a>
@@ -75,11 +80,18 @@
       </div>
       <div class="mt-2 dark:text-white text-black font-mono justify-center text-justify text-xl lg:text-base">
         <div class="w-full">
-          <center><div class="float-none p-4 my-4 bg-gray-100 shadow-lg shadow-gray-700 rounded-xl w-1/2 lg:my-0 lg:ml-4 lg:w-1/6 lg:float-right dark:shadow-green-500/50 dark:bg-slate-800">
-            <img class="rounded-xl mb-2" src="./imagens/earth-icon.png" id="elementImage">
-            <a href="https://www.pngwing.com/pt/free-png-cmrkn" target="_blank" class="text-sm underline text-black dark:text-white" id="imageText">Ilustração do nosso planeta Terra.</a>
-          </div></center>
-          <p class="text-xl lg:text-base" id="elementText">Bem-vindo ao <b>Guia da Crosta Terrestre</b>, onde nós te descrevemos os elementos mais abundantes e importantes da nossa gigante esfera que chamamos de Terra.<br><br>Para começar, <b>selecione um elemento na barra acima.</b>
+          <center>
+            <div
+              class="float-none p-4 my-4 bg-gray-100 shadow-lg shadow-gray-700 rounded-xl w-1/2 lg:my-0 lg:ml-4 lg:w-1/6 lg:float-right dark:shadow-green-500/50 dark:bg-slate-800">
+              <img class="rounded-xl mb-2" src="./imagens/earth-icon.png" id="elementImage">
+              <a href="https://www.pngwing.com/pt/free-png-cmrkn" target="_blank"
+                class="text-sm underline text-black dark:text-white" id="imageText">Ilustração do nosso planeta
+                Terra.</a>
+            </div>
+          </center>
+          <p class="text-xl lg:text-base" id="elementText">Bem-vindo ao <b>Guia da Crosta Terrestre</b>, onde nós te
+            descrevemos os elementos mais abundantes e importantes da nossa gigante esfera que chamamos de
+            Terra.<br><br>Para começar, <b>selecione um elemento na barra acima.</b>
           </p>
         </div>
       </div>
