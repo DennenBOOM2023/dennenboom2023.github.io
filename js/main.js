@@ -191,7 +191,8 @@ document.onkeydown = function(event) {
     cKC += keys[event.keyCode];
     if (konamiCode.slice(0, cKC.length) == cKC) {
       if (cKC == konamiCode) {
-        document.getElementById("elementText").innerHTML = "<iframe src=\"http://pudim.com.br\" class=\"w-full h-screen\"></iframe>";
+		alert("🤓");
+        location.href = "https://media.tenor.com/xCc58fEqFREAAAAd/nerd-nerdy.gif";
         cKC = "";
       }
     } else {
@@ -200,9 +201,3 @@ document.onkeydown = function(event) {
   }
 
 }
-
-/*
-<img id="elementImage" class="mx-auto w-fit h-fit"
-               src="./imagens/earth-icon.png"></img>
-            <a class="py-5" id="imageCredits" href="https://www.iconfinder.com/iconsets/planets-1"><p class="text-xs text-cyan-600 underline">Fonte da imagem</p></li>
-*/
