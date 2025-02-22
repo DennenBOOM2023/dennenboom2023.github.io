@@ -64,17 +64,7 @@ const selectedClass = "inline-block p-4 text-gray-500 dark:text-gray-900 bg-gray
 const selectedClassCHON = "inline-block p-4 text-gray-500 bg-green-100 dark:bg-green-500 dark:text-gray-900 rounded-t-lg active";
 
 function isPhone() {
-  if (navigator.userAgent.match(/Android/i)
-    || navigator.userAgent.match(/webOS/i)
-    || navigator.userAgent.match(/iPhone/i)
-    || navigator.userAgent.match(/iPad/i)
-    || navigator.userAgent.match(/iPod/i)
-    || navigator.userAgent.match(/BlackBerry/i)
-    || navigator.userAgent.match(/Windows Phone/i)) {
-    return true;
-  } else {
-    return false;
-  }
+  return navigator.userAgent.match(/(Android|webOS|iPhone|iPod|Blackberry|Windows Phone)/i) !== null;
 }
 
 function setCookie(cname, cvalue, exdays) {
